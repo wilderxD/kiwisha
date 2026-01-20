@@ -1,1 +1,1 @@
-###simulación de conflicto creandolo
+###simulación de conflicto ocacionandolo
