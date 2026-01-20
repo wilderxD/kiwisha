@@ -1,0 +1,39 @@
+name: ✨ Feature Request
+description: Solicitud de nueva funcionalidad
+title: "[FEATURE]: "
+labels: ["enhancement", "sprint-1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Solicitud de nueva funcionalidad
+        Gracias por contribuir al proyecto Kiwisha.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: ¿Qué funcionalidad deseas agregar?
+      placeholder: Describe la funcionalidad...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justificación
+      description: ¿Por qué es importante esta funcionalidad?
+      placeholder: Explica el valor que aporta...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: ¿Cómo sabremos que está completa?
+      placeholder: |
+        - [ ] Criterio 1
+        - [ ] Criterio 2
+    validations:
+      required: false

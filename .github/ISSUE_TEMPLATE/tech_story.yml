@@ -1,0 +1,59 @@
+name: ⚙️ Tech Story
+description: Historia técnica del Sprint
+title: "[TECH]: "
+labels: ["tech", "sprint-1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Historia Técnica - Sprint 1
+        Para tareas de infraestructura, herramientas y configuración.
+  
+  - type: input
+    id: code
+    attributes:
+      label: Código
+      description: Código del issue (ej. S1-T06)
+      placeholder: S1-T##
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: ¿Por qué es necesaria esta tarea técnica?
+      placeholder: Explica el contexto...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo
+      description: ¿Qué se debe lograr?
+      placeholder: Define el objetivo...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tareas
+      description: Lista de tareas a realizar
+      placeholder: |
+        - [ ] Tarea 1
+        - [ ] Tarea 2
+    validations:
+      required: true
+  
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done (DoD)
+      description: ¿Cómo sabemos que está terminado?
+      placeholder: |
+        - [ ] Criterio 1
+        - [ ] Criterio 2
+    validations:
+      required: true
