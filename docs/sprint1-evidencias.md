@@ -1,33 +1,47 @@
-# Evidencias del Sprint 1 - Kiwisha E-Commerce
+# Evidencias del Sprint 1 - Proyecto Kiwisha
 
-**Versión del Release:** v0.1.0
+**Versión:** v0.1.0 (Entrega Final)
 **Fecha:** 20 de Enero de 2026
 
-## Trazabilidad de Cambios por Rol
+## 1. Tabla de Trazabilidad por Rol
 
-Esta tabla resume las contribuciones técnicas y funcionales de cada integrante durante el Sprint 1, demostrando el uso correcto de Gitflow.
+A continuación se detallan las evidencias de cumplimiento de los objetivos del Sprint 1 para cada integrante del equipo.
 
-| Rol | Integrante | Historia / Issue | Pull Request (PR) | Evidencia Clave (SHA / Captura) | Estado |
-| **Dev B (Release)** | Wilder | [S1-T08] Versionado y Release | [PR #XX: Release Notes]) | **Release:** [v1.0.0](LINK_AL_RELEASE_EN_GITHUB) <br> **Captura:** `img/S1_E06_release.png` |  Completado |
-| **Dev C (Conflicto)** | Jose | [S1-T05] Resolución Conflicto | [PR #YY: Fix Conflicto] d7199a4 | **SHA Resolución:** `d7199a4` <br> **Captura:** `img/S1_E05_conflict_fixed.png` |  Completado |
+| Rol | Integrante | Tarea / Issue | Pull Request (PR) | Evidencia Clave |
+| :--- | :--- | :--- | :--- | :--- |
+| **PO** | Ricardo | **Backlog & Issues** <br> (Crear S1-US01 a S1-US12 + Tablero) | [PR: docs backlog Sprint 1]([https://github.com/RsalasOFF/Kiwisha/pull/28]) <br> *(Rama: feature/s1-backlog-po)* |
+| **SM** | Franco | **Proceso & Protección** <br> (Branch Protection + CONTRIBUTING) | [PR: docs workflow]([https://github.com/RsalasOFF/Kiwisha/pull/26]) <br> *(Rama: feature/s1-workflow-sm)* | **Protección Main:** `img/S1_E_branch_protection.jpg` <br> **Reglas:** `CONTRIBUTING.md` |
+| **Dev A** | Marcos | **Templates GitHub** <br> (Issue forms + PR Template) | [PR: feat templates]([https://github.com/RsalasOFF/Kiwisha/pull/1]) <br> *(Rama: feature/s1-templates)* | **Captura:** `img/S1_E_templates_demo.png` <br> (Issue de prueba creado) |
+| **Dev B** | Wilder | **Release & Evidencias** <br> (Changelog + Release v0.1.0) | [PR: release notes](["link"]) <br> *(Rama: feature/s1-release-notes)* | **Release:** [v0.1.0](["link"]) <br> **Captura:** `img/S1_E06_release.png` |
+| **Dev C** | Jose | **Conflicto Real** <br> (Generar y resolver conflicto) | [PR: fix conflicto]([https://github.com/RsalasOFF/Kiwisha/pull/30]) <br> *(Rama: feature/s1-conflict-b)* | **SHA Resolución:** `[d7199a4]` <br> **Capturas:** Ver sección 2 |
+
 ---
 
-## Detalle del Conflicto Real (Dev C)
+## 2. Detalle del Conflicto Real (Dev C)
 
-Se provocó y resolvió un conflicto controlado para demostrar la capacidad de resolución del equipo.
+Se evidencia el manejo de conflictos en Git según el punto simulado.
 
-* **Archivo en conflicto:** `docs/flujo-trabajo.md`
-* **Rama A (Origen):** `feature/s1-conflict-a` (Mergeada primero)
-* **Rama B (Conflicto):** `feature/s1-checkout-b` (Generó el conflicto)
-* **Commit de Resolución:** `d7199a4`
+* **Archivo afectado:** `docs/flujo-trabajo.md`
+* **Escenario:** Dos ramas intentaron editar la misma línea simultáneamente.
 
-### Capturas de Pantalla
+### Pasos Ejecutados:
+1.  **Rama A (`feature/s1-conflict-a`):** Modificó el archivo y se fusionó a feature/s1-conflict-b.
+2.  **Rama B (`feature/s1-conflict-b`):** Modificó el archivo (desde una versión anterior) con otro texto.
+3.  **Resultado:** GitHub bloqueó el Merge automático.
 
-**1. Conflicto detectado en GitHub (Antes):**
-![Conflicto Antes](img/S1_E04_PR_conflict_before.png)
+### Evidencias Gráficas:
 
-**2. Conflicto resuelto y PR listo (Después):**
-![Conflicto Después](img/S1_E05_PR_conflict_after.png)
+**A. Bloqueo en GitHub (Antes):**
+![Conflicto detectado](img/S1_E04_PR_conflict_before.jpg)
 
-**3. Release Publicado v0.1.0:**
-![Release Final](img/S1_E06_release_v0.1.0.png)
+**B. Resolución y Merge (Después):**
+![Conflicto resuelto](img/S1_E05_PR_conflict_after.jpg)
+
+**C. Commit de Resolución (SHA):**
+El conflicto fue resuelto manualmente en el commit: `[d7199a4]`
+
+---
+
+## 3. Conclusión del Sprint
+
+El equipo ha configurado exitosamente el entorno de desarrollo, estableciendo las normas de colaboración (Gitflow), plantillas de estandarización y la planificación inicial (Backlog), culminando con el Release **v0.1.0**.
