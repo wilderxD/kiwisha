@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiwisha - Pedido Realizado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">🌾 Kiwisha</a>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0 text-center p-5">
+                <div class="mb-4">
+                    <span class="display-1 text-success">✓</span>
+                </div>
+                <h1 class="fw-bold mb-3">¡Gracias por tu compra!</h1>
+                <p class="text-muted fs-5 mb-5">Tu pedido ha sido procesado exitosamente y llegará a la dirección indicada.</p>
+                
+                <div class="text-start bg-light p-4 rounded mb-5">
+                    <h5 class="fw-bold mb-3 border-bottom pb-2">Resumen del Pedido</h5>
+                    <div th:each="item : ${cart}" class="d-flex justify-content-between mb-2">
+                        <span th:text="${item.product.name + ' (x' + item.quantity + ')'}">Producto</span>
+                        <span th:text="${'S/ ' + #numbers.formatDecimal(item.subtotal, 1, 2)}">0.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3 text-primary h5 fw-bold">
+                        <span>Pagado:</span>
+                        <span th:text="${'S/ ' + #numbers.formatDecimal(total, 1, 2)}">0.00</span>
+                    </div>
+                    
+                    <div class="small text-muted mt-4">
+                        <div><strong>Entregando en:</strong> <span th:text="${address}"></span></div>
+                        <div><strong>Celular:</strong> <span th:text="${phone}"></span></div>
+                        <div><strong>Usuario:</strong> <span th:text="${session.user != null ? session.user : 'Invitado'}"></span></div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-md-6 mx-auto">
+                    <a href="/productos" class="btn btn-primary btn-lg rounded-pill">Seguir Comprando</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

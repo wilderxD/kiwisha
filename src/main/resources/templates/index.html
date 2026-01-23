@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiwisha - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">🌾 Kiwisha</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/productos">Catálogo</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li th:if="${session.user == null}" class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <li th:if="${session.user != null}" class="nav-item"><span class="nav-link text-white" th:text="${'Hola, ' + session.user}"></span></li>
+                <li th:if="${session.user != null}" class="nav-item"><a class="nav-link text-warning" href="/logout">Salir</a></li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-light ms-lg-3 px-3 rounded-pill" href="/carrito">
+                        🛒 <span class="badge rounded-pill bg-danger" th:text="${session.cart != null ? session.cart.size() : 0}">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section text-center d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Nutrición que Inspira</h1>
+        <p class="lead fs-4">El superalimento de los Incas, en la puerta de tu hogar.</p>
+        <div class="mt-4">
+            <a class="btn btn-light btn-lg px-5 border-0 shadow-sm" href="/productos" role="button">Comprar Ahora</a>
+        </div>
+    </div>
+</header>
+
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Sostenibilidad</h3>
+            <p>Trabajamos directamente con productores locales asegurando un comercio justo.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Súper Alimento</h3>
+            <p>La Kiwicha es reconocida mundialmente por su alto valor nutricional.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>直送 (Directo)</h3>
+            <p>Del campo a tu hogar, manteniendo la frescura y calidad original.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light py-4 border-top">
+    <div class="container text-center">
+        <p class="text-muted">&copy; 2026 Kiwisha E-Commerce. Proyecto Ágil.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

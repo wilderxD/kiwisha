@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiwisha - Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">🌾 Kiwisha</a>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body p-5">
+                    <h2 class="fw-bold mb-4">Datos de Envío</h2>
+                    
+                    <div th:if="${session.user == null}" class="alert alert-warning">
+                        ⚠️ No has iniciado sesión. Puedes completar la compra, pero te recomendamos <a href="/login" class="fw-bold">Ingresar</a>.
+                    </div>
+
+                    <form th:action="@{/carrito/checkout}" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Dirección de Entrega</label>
+                            <input type="text" name="address" class="form-control" placeholder="Av. Los Incas 123, Cusco" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono de contacto</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="987654321" required>
+                        </div>
+                        <div class="mb-5">
+                            <label class="form-label">Método de Pago (Simulado)</label>
+                            <select class="form-select">
+                                <option>Pago contra entrega</option>
+                                <option disabled>Tarjeta (Próximo Sprint)</option>
+                            </select>
+                        </div>
+
+                        <div class="bg-light p-3 rounded mb-4">
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold">Total a pagar:</span>
+                                <span class="h4 fw-bold text-primary m-0">S/ <span th:text="${#numbers.formatDecimal(total, 1, 2)}"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Confirmar Pedido</button>
+                            <a href="/carrito" class="btn btn-link text-muted">Volver al carrito</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
