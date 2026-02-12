@@ -1,0 +1,26 @@
+target/
+temp_backup/
+
+.mvn/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+.vscode/
+*.env
+log/
+*.log
+
+# Allow Maven Wrapper files even though *.jar and .mvn/ are ignored
+!.mvn/
+!.mvn/wrapper/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties

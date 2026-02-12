@@ -1,5 +1,10 @@
 # 🌾 Kiwisha — E-Commerce Platform (Proyecto Ágil)
 
+![Build Status](https://img.shields.io/badge/Jenkins-Pipeline-blue?style=flat-square&logo=jenkins)
+![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen?style=flat-square)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen?style=flat-square)
+![Quality Gateway](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen?style=flat-square)
+
 Plataforma web de comercio electrónico orientada a productos andinos y derivados de kiwicha.  
 Este repositorio se gestiona bajo un enfoque **ágil (Scrum)**, evidenciando trabajo colaborativo, control de versiones y buenas prácticas de desarrollo.
 
@@ -102,8 +107,34 @@ Ejemplos:
 
 ---
 
+## � Cómo Iniciar el Proyecto (Local)
+
+Para ejecutar la plataforma en tu entorno local, sigue estos pasos:
+
+1. **Requisitos:**
+   - JDK 17 o superior (Recomendado JDK 23).
+   - El proyecto incluye Maven Wrapper (`./mvnw`).
+
+2. **Ejecución:**
+   Desde la raíz del proyecto, ejecuta:
+   ```powershell
+   ./mvnw spring-boot:run
+   ```
+
+3. **Acceso:**
+   - App: [http://localhost:8080](http://localhost:8080)
+   - Admin: [http://localhost:8080/admin/products](http://localhost:8080/admin/products)
+   - DB H2: [http://localhost:8080/h2-console](http://localhost:8080/h2-console) (JDBC: `jdbc:h2:mem:kiwishadb`)
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+- **Backend:** Spring Boot 3.2.1, Spring Data JPA, H2 Database.
+- **Frontend:** Thymeleaf, Bootstrap 5.
+- **Tools:** Git, GitHub (Issues, PR Templates, Milestones).
+
+---
+
 ## 📌 Estado
 En desarrollo activo.  
 La planificación y evidencias del Sprint 1 se gestionan en GitHub (Milestone + Project Board).
-
----
