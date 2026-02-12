@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #8b4513; /* SaddleBrown - Color tierra/kiwicha */
+    --accent-color: #f4a460;   /* SandyBrown */
+    --bg-light: #faf9f6;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.8)), 
+                url('https://images.unsplash.com/photo-1509475826633-fed5bb19356e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #6d360f;
+    border-color: #6d360f;
+}
+
+.badge-category {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 500;
+}
+
+.product-price {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
